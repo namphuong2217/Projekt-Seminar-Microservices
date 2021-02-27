@@ -2,6 +2,13 @@
 
 ## 0. Setup
 
+UserService port 9001
+DepartmentService port 9002
+RegistryService port 8761
+GatewayService port 9191
+
+UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logische Namen ab.
+
 #### 0.1 ``UserService``
 
 * UserService ``application.yml``
@@ -89,6 +96,16 @@
 * GatewayService ``application.yml``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config.png)
+
+* GatewayService ``application.yml`` (weiter)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config%201.png)
+
+## Testing API - Demo Client durch [Insomnia](https://insomnia.rest/)
+
+* API Request Collection
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/01%20Testing%20Services%20Collection.png)
 
 * GatewayService ``application.yml``
 
