@@ -13,7 +13,7 @@ GatewayService port 9191
 UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logische Namen ab.
 
 
-## 1. ateway-Service           
+## 1. Gateway-Service           
 
 Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur 
 
@@ -23,6 +23,9 @@ Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config%201.png)
 
+* ``GatewayServiceApplication`` with ``@EnableEurekaClient`` annotation
+
+[GatewayServiceApplication](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/gateway-service/src/main/java/com/projektseminarmicroservices/gateway/service/GatewayServiceApplication.java)
 
 ## 2. Registry/Discovery-Service
 
@@ -36,13 +39,10 @@ Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müs
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Registry%20Service%20Config.png)
 
-* ``@EnableEurekaServer`` Annotation
+* ``RegistryServiceApplication`` with ``@EnableEurekaServer`` annotation
 
 [``RegistryServiceApplication``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
 
-* RegistryService ``application.yml``
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
 
 #### 0.1 ``UserService``
 
@@ -106,6 +106,11 @@ Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müs
 #### 0.2 ``DepartmentService``
 
 * DepartmentService ``application.yml``
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
+
+
+* RegistryService ``application.yml``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
 
