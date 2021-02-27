@@ -101,11 +101,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config%201.png)
 
-## Testing API - Demo Client durch [Insomnia](https://insomnia.rest/)
 
-* API Request Collection
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/01%20Testing%20Services%20Collection.png)
 
 * GatewayService ``application.yml``
 
@@ -145,4 +141,71 @@ Analog zu ``UserService``
 
 ## 4. Service-Factory             
 
-Dieser Service enthält Methoden für die dynamische Erstellung eines Service
+Dieser Service enthält Methoden für die dynamische Erstellung eines Service 
+
+## 5. Testing API - Demo Client durch [Insomnia](https://insomnia.rest/)
+
+* API Request Collection
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/01%20Testing%20Services%20Collection.png)
+
+* UserService GET Request via localhost:9191 (GatewayService): return a service instance ID
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/01%20GET%20User%20ServiceId.png)
+
+* GET a user with id as parameter
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/02%20GET%20User%20Gateway.png)
+
+*  GET a user with id as parameter failed
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/02%20GET%20User%20Gateway%20Fail.png)
+
+* POST register a user
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/03%20POST%20User%20Gateway.png)
+
+* POST register a user failed 
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/03%20POST%20User%20Gateway%20Fail%202.png)
+
+* POST register a user failed (weiter)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/03%20POST%20User%20Gateway%20Fail.png)
+
+* POST save a department (DepartmentService)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/04%20POST%20Department%20Gateway.png)
+
+* GET retrieve a department (DepartmentService)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/05%20GET%20Department%20Gateway.png)
+
+* GET user information with department information (UserService & DepartmentService)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/06%20GET%20ResponseDTO.png)
+
+* GET ServiceFactory
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/07%20GET%20User%20createService.png)
+
+* POST end a service (UserService)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/08%20POST%20User%20shutdownContext.png)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/08%20ShutdownContext%20UserService%201.png)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/08%20ShutdownContext%20UserService%202.png)
+
+* API Request Collection
+
+![image]()
+
+* API Request Collection
+
+![image]()
+
+* API Request Collection
+
+![image]()
+
