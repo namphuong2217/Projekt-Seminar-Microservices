@@ -3,8 +3,11 @@
 ## 0. Setup
 
 UserService port 9001
+
 DepartmentService port 9002
+
 RegistryService port 8761
+
 GatewayService port 9191
 
 UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logische Namen ab.
@@ -15,18 +18,12 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/01%20User%20Service%20Config.png)
 
-
-* UserService ``application.yml``
-
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/01%20User%20Service%20Config%201.png)
 
 
 * UserService structure
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/02%20User%20Service%20Structure.png)
-
-* UserService structure
-
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/02%20User%20Service%20Structure%201.png)
 
 * UserService ``data.sql``
@@ -46,11 +43,9 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/04%20User%20Repo.png)
 
-* UserController 1
+* UserController 
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20UserController%201.png)
-
-* UserControler 2
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20UserController%202.png)
 
@@ -66,11 +61,11 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/ResponseDTO%20User%26Department.png)
 
-* ``UserServiceApplication1``
+* ``UserServiceApplication`` with ``@EnableEurekaClient`` Annotation
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/UserServiceApplication1.png)
 
-* ``UserService`` ruft ``DepartmentService`` auf
+* ``UserService`` ruft ``DepartmentService`` auf (Die zwei Services kommunizieren miteinander)
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/UserServiceApplication2.png)
 
@@ -189,15 +184,4 @@ Dieser Service enthält Methoden für die dynamische Erstellung eines Service
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/08%20ShutdownContext%20UserService%202.png)
 
-* API Request Collection
-
-![image]()
-
-* API Request Collection
-
-![image]()
-
-* API Request Collection
-
-![image]()
 
