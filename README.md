@@ -12,6 +12,38 @@ GatewayService port 9191
 
 UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logische Namen ab.
 
+
+## 1. ateway-Service           
+
+Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur 
+
+* GatewayService ``application.yml``
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config.png)
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config%201.png)
+
+
+## 2. Registry/Discovery-Service
+
+Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müssen sich zuvor hier registriert haben 
+
+* Eureka Page http://localhost:8761
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/00%20Eureka%20Services.png)
+
+* RegistryService ``application.yml``
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Registry%20Service%20Config.png)
+
+* ``@EnableEurekaServer`` Annotation
+
+[``RegistryServiceApplication``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
+
+* RegistryService ``application.yml``
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
+
 #### 0.1 ``UserService``
 
 * UserService ``application.yml``
@@ -19,7 +51,6 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/01%20User%20Service%20Config.png)
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/01%20User%20Service%20Config%201.png)
-
 
 * UserService structure
 
@@ -33,7 +64,6 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 * UserService ``schema.sql``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/03%20SchemaSQL.png)
-
 
 * User model
 
@@ -73,47 +103,11 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 [``RegistryServiceApplication``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller)
 
-
 #### 0.2 ``DepartmentService``
 
 * DepartmentService ``application.yml``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
-
-#### 0.3 ``RegistryService``
-
-* RegistryService ``application.yml``
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
-
-#### 0.4 ``GatewayService``
-
-* GatewayService ``application.yml``
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config.png)
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config%201.png)
-
-## 1. Registry/Discovery-Service
-
-Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müssen sich zuvor hier registriert haben 
-
-* Eureka Page http://localhost:8761
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/00%20Eureka%20Services.png)
-
-* RegistryService ``application.yml``
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Registry%20Service%20Config.png)
-
-* ``@EnableEurekaServer`` Annotation
-
-[``RegistryServiceApplication``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
-
-## 2. Gateway-Service:             
-
-Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur 
-
 
 ## 3. Dynamisch-Generierter Service:Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar. 
 
