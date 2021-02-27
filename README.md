@@ -89,21 +89,13 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 * RegistryService ``application.yml``
 
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
 
 #### 0.4 ``GatewayService``
 
 * GatewayService ``application.yml``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config.png)
-
-* GatewayService ``application.yml`` (weiter)
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config%201.png)
-
-
-
-* GatewayService ``application.yml``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Gateway%20Service%20config%201.png)
 
