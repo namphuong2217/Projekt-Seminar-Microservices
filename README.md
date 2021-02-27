@@ -14,7 +14,7 @@ Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müs
 
 * ``@EnableEurekaServer`` Annotation
 
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
+[``RegistryServiceApplication``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
 
 ### Gateway-Service:              Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur 
 
