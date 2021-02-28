@@ -2,9 +2,9 @@
 
 ## 0. Setup
 
-UserService port 9001 [http://localhost:8761/users/**](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller)
+UserService port 9001 http://localhost:{randomPort}/users/** ([User Controllres](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller))
 
-DepartmentService port 9002 with API endpoint  [http://localhost:8761/departments/**](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java)
+DepartmentService port 9002 with API endpoint  [http://localhost:9002/departments/**](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java)
 
 Registry-, DiscoveryService port 8761
 
