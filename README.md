@@ -15,7 +15,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ## 1. Gateway-Service           
 
-===AUFGABE: Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur===
+# *AUFGABE: Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur*
 
 * GatewayService ``application.yml``
 
