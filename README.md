@@ -15,7 +15,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ## 1. Gateway-Service           
 
-## ***"Aufgabe: Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur"***
+## ***"Aufgabe: Gateway-Service: Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur"***
 
 * GatewayService ``application.yml``
 
@@ -29,7 +29,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ## 2. Registry/Discovery-Service
 
-## ***"Aufgabe: Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müssen sich zuvor hier registriert haben."***
+## ***"Aufgabe: Registry/Discovery-Service: Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müssen sich zuvor hier registriert haben."***
 
 * Eureka Page http://localhost:8761
 
@@ -49,7 +49,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 #### 3.0 ``UserService``
 
 
-## ***"Aufgabe: Was der Service macht, bleibt jedem selbst überlassen."***
+## ***"Aufgabe: Was der Service macht, bleibt jedem selbst überlassen. Es reicht ein Einfaches „hello world“ mit Service ID zum Unterscheiden der verschiedenen Instanzen"***
 
 ``UserService`` kann folgende zurückgeben:
 
@@ -65,7 +65,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 UserService hat "random port" und ein identifizierter ID.
 
-## ***"Aufgabe: Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar."***
+## ***"Aufgabe: Dynamisch-Generierter Service: Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar."***
 
 UserService ist an einer Datenbank verknüpft (``userservicedb`` Postgresql) und benutzt JPA-Hibernate.
 
@@ -116,7 +116,7 @@ Controling data schema.
 
 #### 3.1 Service-Factory      
 
-## ***"Aufgabe:  Dieser Service enthält Methoden für die dynamische Erstellung eines Service."***
+## ***"Aufgabe: Service-Factory: Dieser Service enthält Methoden für die dynamische Erstellung eines Service."***
 
 * ``ServiceFactoryController``
 
