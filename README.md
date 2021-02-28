@@ -144,7 +144,7 @@ Controling data schema.
 
 [``User Controllers``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller)
 
-## 3.3 ``DepartmentService``
+#### 3.3 ``DepartmentService``
 
 Analog zu ``UserService`` ([Link to Department Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/department-service))
 
