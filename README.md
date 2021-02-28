@@ -2,15 +2,15 @@
 
 ## 0. Setup
 
-UserService port 9001
+UserService port 9001 [http://localhost:8761/users/**](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller)
 
-DepartmentService port 9002
+DepartmentService port 9002 with API endpoint  [http://localhost:8761/departments/**](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java)
 
-RegistryService port 8761
+Registry-, DiscoveryService port 8761
 
 GatewayService port 9191
 
-UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logische Namen ab.
+UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logischer Namen ab.
 
 
 ## 1. Gateway-Service           
