@@ -14,8 +14,8 @@ import java.io.IOException;
 public class ServiceFactoryController {
 
     @GetMapping("/create-service")
-    public void createNewService() {
-        String path = "src/test/resources/user-service.jar";
+    public void createNewService() throws IOException {
+        String path = "/home/phuong/Desktop/BSc/Mikroservices/user-service/src/main/resources/user-service.jar";
         File file = new File(path);
         String absolutePath = file.getAbsolutePath();
         try {
