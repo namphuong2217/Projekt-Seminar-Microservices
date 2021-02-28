@@ -119,18 +119,30 @@ Analog zu ``UserService`` ([Link to Department Service](https://github.com/namph
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
 
-## 3. Dynamisch-Generierter Service:Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar. 
 
-#### 3.1 ``UserService``
+
+
+## 4. Service-Factory      
+
 Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden. Was der Service macht, bleibt jedem selbst überlassen. Es reicht ein Einfaches „hello world“ mit Service ID zum Unterscheiden der verschiedenen Instanzen. 
 
-#### 3.2 ``DepartmentService``
+* ``ServiceFactoryController``
 
-[``DepartmentService``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice)
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ServiceFactoryController.png)
 
-Analog zu ``UserService``
 
-## 4. Service-Factory             
+## 4. Dynamisch-Generierter Service
+
+Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar. 
+
+
+* ``ShutdownController``
+
+Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ShutdownController.png)
+
+
 
 Dieser Service enthält Methoden für die dynamische Erstellung eines Service 
 
