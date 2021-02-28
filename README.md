@@ -29,7 +29,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ## 2. Registry/Discovery-Service
 
-## ***"AUFGABE: Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müssen sich zuvor hier registriert haben."***
+## ***"Aufgabe: Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müssen sich zuvor hier registriert haben."***
 
 * Eureka Page http://localhost:8761
 
@@ -49,7 +49,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 #### 3.0 ``UserService``
 
 
-## ***"AUFGABE: Was der Service macht, bleibt jedem selbst überlassen."***
+## ***"Aufgabe: Was der Service macht, bleibt jedem selbst überlassen."***
 
 ``UserService`` kann folgende zurückgeben:
 
@@ -65,7 +65,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 UserService hat "random port" und ein identifizierter ID.
 
-## ***"AUFGABE: Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar."***
+## ***"Aufgabe: Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar."***
 
 UserService ist an einer Datenbank verknüpft (``userservicedb`` Postgresql) und benutzt JPA-Hibernate.
 
@@ -116,7 +116,7 @@ Controling data schema.
 
 #### 3.1 Service-Factory      
 
-## ***"AUFGABE:  Dieser Service enthält Methoden für die dynamische Erstellung eines Service."***
+## ***"Aufgabe:  Dieser Service enthält Methoden für die dynamische Erstellung eines Service."***
 
 * ``ServiceFactoryController``
 
@@ -125,9 +125,11 @@ Controling data schema.
 
 #### 3.2 Möglichkeit, um ein Service wieder zu beenden
 
-## ***"AUFGABE: Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden."***
+## ***"Aufgabe: Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden."***
 
 * ``ShutdownController``
+
+Die Methode hat die Möglichkeit, aktuelle Spring Context zu beenden.
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ShutdownController.png)
 
@@ -157,7 +159,7 @@ Analog zu ``UserService`` ([Link to Department Service](https://github.com/namph
 
 ## 4. Testing API - Demo Client durch [Insomnia](https://insomnia.rest/)
 
-## ***"AUFGABE: Einfacher Demo-Client."***
+## ***"Aufgabe: Einfacher Demo-Client."***
 
 * API Request Collection
 
