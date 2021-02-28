@@ -144,7 +144,7 @@ Controling data schema.
 
 [``User Controllers``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller)
 
-## 3.2 ``DepartmentService``
+## 3.3 ``DepartmentService``
 
 Analog zu ``UserService`` ([Link to Department Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/department-service))
 
@@ -152,7 +152,7 @@ Analog zu ``UserService`` ([Link to Department Service](https://github.com/namph
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
 
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/Screenshot%20from%202021-02-28%2013-08-19.png)
 
 
 ## 4. Testing API - Demo Client durch [Insomnia](https://insomnia.rest/)
