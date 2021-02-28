@@ -6,9 +6,9 @@ UserService port 9001 http://localhost:{randomPort}/users/** ([Link to User Cont
 
 DepartmentService port 9002 with API endpoint  http://localhost:9002/departments/** ([Link to Department Controller](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java))
 
-Registry-, DiscoveryService port 8761 [Link to ``main`` function of Registry Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
+Registry-, DiscoveryService port 8761 ([Link to ``main`` function of Registry Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/registry-service))
 
-GatewayService port 9191 [Link to ``main`` function of Gateway Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/gateway-service/src/main/java/com/projektseminarmicroservices/gateway/service/GatewayServiceApplication.java)
+GatewayService port 9191 ([Link to ``main`` function of Gateway Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/gateway-service))
 
 UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logischer Namen ab.
 
@@ -44,9 +44,15 @@ Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müs
 [``RegistryServiceApplication``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
 
 
-#### 0.1 ``UserService``
+## 3.1 ``UserService``
 
-* UserService ``application.yml``
+UserService hat "random port" und ein identifizierter ID.
+
+UserService ist an einer Datenbank verknüpft (``userservicedb`` Postgresql) und benutzt JPA-Hibernate.
+
+UserService hat "global exception handler", um Exception zu handeln. 
+
+* UserService ``application.yml`` 
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/01%20User%20Service%20Config.png)
 
@@ -57,11 +63,11 @@ Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müs
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/02%20User%20Service%20Structure.png)
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/02%20User%20Service%20Structure%201.png)
 
-* UserService ``data.sql``
+* UserService ``data.sql`` (loading initialized data for testing)
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/03%20DataSQL.png)
 
-* UserService ``schema.sql``
+* UserService ``schema.sql`` (controling data schema)
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/03%20SchemaSQL.png)
 
@@ -87,7 +93,7 @@ Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müs
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ServiceFactoryController.png)
 
-* ResponseDTO
+* ResponseDTO to return ``User`` and ``Department`` information from database
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/ResponseDTO%20User%26Department.png)
 
@@ -103,14 +109,13 @@ Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müs
 
 [``RegistryServiceApplication``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller)
 
-#### 0.2 ``DepartmentService``
+## 3.2 ``DepartmentService``
+
+Analog zu ``UserService`` ([Link to Department Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/department-service))
 
 * DepartmentService ``application.yml``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
-
-
-* RegistryService ``application.yml``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
 
