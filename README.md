@@ -6,9 +6,9 @@ UserService port 9001 http://localhost:{randomPort}/users/** ([Link to User Cont
 
 DepartmentService port 9002 with API endpoint  http://localhost:9002/departments/** ([Link to Department Controller](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java))
 
-Registry-, DiscoveryService port 8761 ([Link to ``main`` function of Registry Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/registry-service))
+Registry-, DiscoveryService port 8761 ([Link to Registry Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/registry-service))
 
-GatewayService port 9191 ([Link to ``main`` function of Gateway Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/gateway-service))
+GatewayService port 9191 ([Link to Gateway Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/gateway-service))
 
 UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logischer Namen ab.
 
@@ -44,15 +44,28 @@ Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müs
 [``RegistryServiceApplication``](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
 
 
-## 3.1 ``UserService``
+## 3. Service-Factory und Dynamisch-Generierter Service
+
+#### 3.0 ``UserService``
+
+
+Was der Service macht, bleibt jedem selbst überlassen. ``UserService`` kann folgende zurückgeben:
+
+1. Ein Service ID zum Unterscheiden der verschiedenen Instanzen durch GET Request ("/users/service-id")
+2. Registriere ein Nutzer durch POST Request ("/users/register")
+3. Abfrage eines Nutzers durch ID durch GET Request ("/users/{id}")
+4. Abfrage eines Nutzers und dazu gehörigen Department-Namen durch GET Request ("/users/department/{id}")
+
+(mehr darunter)
+
+
+* UserService ``application.yml`` 
 
 UserService hat "random port" und ein identifizierter ID.
 
+Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar.
+
 UserService ist an einer Datenbank verknüpft (``userservicedb`` Postgresql) und benutzt JPA-Hibernate.
-
-UserService hat "global exception handler", um Exception zu handeln. 
-
-* UserService ``application.yml`` 
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/01%20User%20Service%20Config.png)
 
@@ -60,20 +73,30 @@ UserService hat "global exception handler", um Exception zu handeln.
 
 * UserService structure
 
+UserService hat "global exception handler", um Exception zu handeln. 
+
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/02%20User%20Service%20Structure.png)
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/02%20User%20Service%20Structure%201.png)
 
-* UserService ``data.sql`` (loading initialized data for testing)
+* UserService ``data.sql`` 
+
+Doading initialized data for testing
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/03%20DataSQL.png)
 
-* UserService ``schema.sql`` (controling data schema)
+* UserService ``schema.sql`` 
+ 
+Controling data schema
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/03%20SchemaSQL.png)
 
 * User model
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/04%20User%20Model.png)
+
+* ResponseDTO to return ``User`` and ``Department`` information from database
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/ResponseDTO%20User%26Department.png)
 
 * ``UserRepository``
 
@@ -85,17 +108,23 @@ UserService hat "global exception handler", um Exception zu handeln.
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20UserController%202.png)
 
-* ``ShutdownController``
+#### 3.1 Service-Factory      
 
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ShutdownController.png)
+Dieser Service enthält Methoden für die dynamische Erstellung eines Service 
 
 * ``ServiceFactoryController``
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ServiceFactoryController.png)
 
-* ResponseDTO to return ``User`` and ``Department`` information from database
 
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/ResponseDTO%20User%26Department.png)
+#### 3.2 Möglichkeit, um ein Service wieder zu beenden
+
+Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden
+
+* ``ShutdownController``
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ShutdownController.png)
+
 
 * ``UserServiceApplication`` with ``@EnableEurekaClient`` Annotation
 
@@ -120,31 +149,6 @@ Analog zu ``UserService`` ([Link to Department Service](https://github.com/namph
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/09%20Deparment%20Service%20Config.png)
 
 
-
-
-## 4. Service-Factory      
-
-Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden. Was der Service macht, bleibt jedem selbst überlassen. Es reicht ein Einfaches „hello world“ mit Service ID zum Unterscheiden der verschiedenen Instanzen. 
-
-* ``ServiceFactoryController``
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ServiceFactoryController.png)
-
-
-## 4. Dynamisch-Generierter Service
-
-Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar. 
-
-
-* ``ShutdownController``
-
-Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/05%20User%20ShutdownController.png)
-
-
-
-Dieser Service enthält Methoden für die dynamische Erstellung eines Service 
 
 ## 5. Testing API - Demo Client durch [Insomnia](https://insomnia.rest/)
 
