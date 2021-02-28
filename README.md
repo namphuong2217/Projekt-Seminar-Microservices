@@ -2,7 +2,7 @@
 
 ## 0. Setup
 
-UserService port 9001 http://localhost:{randomPort}/users/** ([Link to User Controllers](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller))
+UserService random port http://localhost:{randomPort}/users/** ([Link to User Controllers](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller))
 
 DepartmentService port 9002 with API endpoint  http://localhost:9002/departments/** ([Link to Department Controller](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java))
 
@@ -65,7 +65,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 UserService hat "random port" und ein identifizierter ID.
 
-"Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar."
+"AUFGABE: Dieser Service registriert sich nach Erstellung beim Registry/Discovery Service und ist so auffindbar."
 
 UserService ist an einer Datenbank verknüpft (``userservicedb`` Postgresql) und benutzt JPA-Hibernate.
 
@@ -80,6 +80,10 @@ UserService hat "global exception handler", um Exception zu handeln. ([Link to E
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/02%20User%20Service%20Structure.png)
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/02%20User%20Service%20Structure%201.png)
 
+* User model
+
+![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/04%20User%20Model.png)
+
 * UserService ``data.sql`` 
 
 Loading initialized data for testing.
@@ -92,17 +96,13 @@ Controling data schema.
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/03%20SchemaSQL.png)
 
-* User model
-
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/04%20User%20Model.png)
-
 * ResponseDTO to return ``User`` and ``Department`` information from database
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/User%20Service/ResponseDTO%20User%26Department.png)
 
 * Department DTO 
 
-![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/DTO/Department.java)
+[Department DTO in UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/DTO/Department.java)
 
 * ``UserRepository``
 
