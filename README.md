@@ -15,7 +15,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ## 1. Gateway-Service           
 
-"Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur."
+"AUFGABE: Dieser Service ist der Zugangspunkt für alle Klienten und routet den Verkehr zu den entsprechenden Services der Infrastruktur."
 
 * GatewayService ``application.yml``
 
@@ -29,7 +29,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 
 ## 2. Registry/Discovery-Service
 
-"Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müssen sich zuvor hier registriert haben."
+"AUFGABE: Dieser Service erlaubt es, dynamisch erstellte Services zu entdecken. Diese müssen sich zuvor hier registriert haben."
 
 * Eureka Page http://localhost:8761
 
@@ -49,7 +49,7 @@ UserService und DepartmentService registrieren sich bei RegistryService und Gate
 #### 3.0 ``UserService``
 
 
-"Was der Service macht, bleibt jedem selbst überlassen. "
+"AUFGABE: Was der Service macht, bleibt jedem selbst überlassen. "
 
 ``UserService`` kann folgende zurückgeben:
 
@@ -116,7 +116,7 @@ Controling data schema.
 
 #### 3.1 Service-Factory      
 
-"Aufgabe: Dieser Service enthält Methoden für die dynamische Erstellung eines Service."
+"AUFGABE:  Dieser Service enthält Methoden für die dynamische Erstellung eines Service."
 
 * ``ServiceFactoryController``
 
@@ -125,7 +125,7 @@ Controling data schema.
 
 #### 3.2 Möglichkeit, um ein Service wieder zu beenden
 
-"Aufgabe: Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden."
+"AUFGABE: Dieser Service enthält auch eine Methode oder vergleichbare Möglichkeit, um ihn wieder zu beenden."
 
 * ``ShutdownController``
 
@@ -157,33 +157,33 @@ Analog zu ``UserService`` ([Link to Department Service](https://github.com/namph
 
 ## 4. Testing API - Demo Client durch [Insomnia](https://insomnia.rest/)
 
-"Aufgabe: Einfacher Demo-Client."
+"AUFGABE: Einfacher Demo-Client."
 
 * API Request Collection
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/01%20Testing%20Services%20Collection.png)
 
-* UserService GET Request via localhost:9191 (GatewayService): return a service instance ID
+* UserService GET Request via localhost:9191 ([GatewayService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/gateway-service)): return a service instance ID ([UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service))
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/01%20GET%20User%20ServiceId.png)
 
-* GET a user with id as parameter
+* GET a user with id as parameter ([UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service))
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/02%20GET%20User%20Gateway.png)
 
-*  GET a user with id as parameter exception
+*  GET a user with id as parameter exception ([UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service))
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/02%20GET%20User%20Gateway%20Fail.png)
 
-* POST register a user
+* POST register a user ([UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service))
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/03%20POST%20User%20Gateway.png)
 
-* POST register a user exception 
+* POST register a user exception ([UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service))
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/03%20POST%20User%20Gateway%20Fail%202.png)
 
-* POST register a user exception
+* POST register a user exception ([UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service))
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/03%20POST%20User%20Gateway%20Fail.png)
 
@@ -195,7 +195,7 @@ Analog zu ``UserService`` ([Link to Department Service](https://github.com/namph
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/05%20GET%20Department%20Gateway.png)
 
-* GET user information with department information ([UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service) & ([DepartmentService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/department-service)))
+* GET user information with department information ([UserService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service) & [DepartmentService](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/department-service))
 
 ![image](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/Documentation/06%20GET%20ResponseDTO.png)
 
