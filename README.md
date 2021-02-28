@@ -2,13 +2,13 @@
 
 ## 0. Setup
 
-UserService port 9001 http://localhost:{randomPort}/users/** ([User Controllres](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller))
+UserService port 9001 http://localhost:{randomPort}/users/** ([Link to User Controllers](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller))
 
-DepartmentService port 9002 with API endpoint  [http://localhost:9002/departments/**](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java)
+DepartmentService port 9002 with API endpoint  http://localhost:9002/departments/** ([Link to Department Controller](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java))
 
-Registry-, DiscoveryService port 8761
+Registry-, DiscoveryService port 8761 [Link to ``main`` function of Registry Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/registry-service/src/main/java/com/projektseminarmicroservices/registry/service/RegistryServiceApplication.java)
 
-GatewayService port 9191
+GatewayService port 9191 [Link to ``main`` function of Gateway Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/gateway-service/src/main/java/com/projektseminarmicroservices/gateway/service/GatewayServiceApplication.java)
 
 UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logischer Namen ab.
 
