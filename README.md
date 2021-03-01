@@ -2,13 +2,21 @@
 
 ## 0. Setup
 
-UserService random port http://localhost:{randomPort}/users/** ([Link to User Controllers](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller))
+UserService random port http://localhost:{randomPort}/users/** 
 
-DepartmentService port 9002 with API endpoint  http://localhost:9002/departments/** ([Link to Department Controller](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java))
+([Link to User Controllers](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/user-service/src/main/java/com/projektseminarmicroservices/user/service/controller))
 
-Registry-, DiscoveryService port 8761 ([Link to Registry Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/registry-service))
+DepartmentService port 9002 with API endpoint  http://localhost:9002/departments/** 
 
-GatewayService port 9191 ([Link to Gateway Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/gateway-service))
+([Link to Department Controller](https://github.com/namphuong2217/Projekt-Seminar-Microservices/blob/main/department-service/src/main/java/com/projektseminarmicroservices/departmentservice/controller/DepartmentController.java))
+
+Registry-, DiscoveryService port 8761 
+
+([Link to Registry Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/registry-service))
+
+GatewayService port 9191 
+
+([Link to Gateway Service](https://github.com/namphuong2217/Projekt-Seminar-Microservices/tree/main/gateway-service))
 
 UserService und DepartmentService registrieren sich bei RegistryService und GatewayService bildet physische Addresse von UserService und DepartmentService zu logischer Namen ab.
 
